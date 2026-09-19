@@ -55,6 +55,8 @@
 
 html {
   scroll-behavior: smooth;
+  /* Keeps the layout steady when the mobile menu locks page scroll. */
+  scrollbar-gutter: stable;
 }
 
 body {

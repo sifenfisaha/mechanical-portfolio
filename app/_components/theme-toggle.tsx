@@ -93,7 +93,7 @@ export function ThemeToggle() {
       onClick={toggle}
       aria-label={`Switch to ${next} theme`}
       title={`Switch to ${next} theme`}
-      className="relative grid size-9 shrink-0 place-items-center overflow-hidden rounded-[10px] border border-line text-ink/80 transition-colors hover:border-ink/25 hover:text-ink"
+      className="relative grid size-10 shrink-0 place-items-center overflow-hidden rounded-[10px] border border-line text-ink/80 transition-colors hover:border-ink/25 hover:text-ink"
     >
       {/* Sun: shown in light mode. */}
       <svg
