@@ -8,7 +8,7 @@ const projectTypes = [
   "FEA / CFD analysis",
   "Prototyping",
   "Full-time role",
-  "Something else",
+  "Other",
 ];
 
 const fieldClass =
@@ -23,7 +23,7 @@ export function ContactForm({ email }: { email: string }) {
     event.preventDefault();
     const data = new FormData(event.currentTarget);
     const name = String(data.get("name"));
-    const subject = `${data.get("type")} — ${name}`;
+    const subject = `${data.get("type")}: ${name}`;
     const body = [
       String(data.get("message")),
       "",
@@ -77,7 +77,7 @@ export function ContactForm({ email }: { email: string }) {
           />
         </label>
         <label className="block text-[13px] font-medium">
-          What can I help with?
+          Inquiry type
           <select name="type" className={fieldClass} defaultValue={projectTypes[0]}>
             {projectTypes.map((type) => (
               <option key={type}>{type}</option>
@@ -92,7 +92,7 @@ export function ContactForm({ email }: { email: string }) {
           name="message"
           required
           rows={6}
-          placeholder="Tell me about the problem, the timeline and any constraints."
+          placeholder="Briefly describe the project, timeline and any key constraints."
           className={`${fieldClass} resize-y`}
         />
       </label>
@@ -100,8 +100,8 @@ export function ContactForm({ email }: { email: string }) {
       <div className="mt-7 flex flex-wrap items-center justify-between gap-4">
         <p className="text-[12px] text-muted" aria-live="polite">
           {sent
-            ? `Your email app should open now. If it didn't, write to ${email}.`
-            : "Sends from your own email app — nothing is stored on this site."}
+            ? `Your email app should now open. If it doesn't, email ${email} directly.`
+            : "This opens your email app with the message filled in. Nothing is stored on this site."}
         </p>
         <button
           type="submit"

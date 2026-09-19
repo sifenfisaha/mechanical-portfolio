@@ -18,8 +18,8 @@ export default function ToolsPage() {
     <>
       <PageHeader
         eyebrow="Tools"
-        title={["The Tools Behind", "Every Design"]}
-        body="Industry-standard software for modeling and analysis, backed by hands-on manufacturing experience and the engineering methods that tie it all together."
+        title={["Software, skills and", "engineering standards"]}
+        body="The software I use for design and analysis, my manufacturing experience, and the standards I work to."
       />
 
       <div className="pt-12">
@@ -80,12 +80,11 @@ export default function ToolsPage() {
         <Reveal delay={100}>
           <div className="rounded-[10px] border border-line bg-panel p-7 sm:p-10">
             <h2 className="text-[28px] font-semibold leading-[1.12] tracking-[-0.02em] sm:text-[34px]">
-              <span className="sm:block">Methods &amp; </span>
-              <span className="sm:block">Standards</span>
+              <span className="sm:block">Methods and </span>
+              <span className="sm:block">standards</span>
             </h2>
             <p className="mt-4 max-w-[400px] text-[14px] leading-relaxed text-muted">
-              Software is only half of it. These are the engineering practices
-              applied on every project.
+              Engineering methods and standards I apply across my projects.
             </p>
             <ul className="mt-8 grid gap-x-6 gap-y-3 sm:grid-cols-2">
               {methods.map((method) => (

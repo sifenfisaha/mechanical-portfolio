@@ -105,7 +105,7 @@ export default async function ProjectPage({
         <div>
           <Reveal>
             <h2 className="text-[26px] font-semibold tracking-[-0.02em] sm:text-[32px]">
-              The Challenge
+              Challenge
             </h2>
             <p className="mt-4 text-[15px] leading-relaxed text-muted">
               {project.challenge}
@@ -114,7 +114,7 @@ export default async function ProjectPage({
 
           <Reveal className="mt-14">
             <h2 className="text-[26px] font-semibold tracking-[-0.02em] sm:text-[32px]">
-              The Approach
+              Approach
             </h2>
             <ol className="mt-8 space-y-7">
               {project.approach.map((step, i) => (

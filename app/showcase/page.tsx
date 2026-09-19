@@ -26,8 +26,8 @@ export default function ShowcasePage() {
     <>
       <PageHeader
         eyebrow="Showcase"
-        title={["I Build Precise Designs for", "Real-World Challenges"]}
-        body="Every drawing from the portfolio in one place — select any of them to open the project behind it."
+        title={["Technical drawings", "from recent projects"]}
+        body="All drawings from the portfolio in one place. Select a drawing to open the related case study."
       />
 
       <section className="mx-auto max-w-[1200px] px-5 pt-12 md:px-10">

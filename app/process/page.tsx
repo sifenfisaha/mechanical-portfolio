@@ -10,7 +10,7 @@ import { faqs, processPhases } from "../_data/site";
 export const metadata: Metadata = {
   title: "Process",
   description:
-    "How projects move from requirements to production release: concept, CAD, simulation, prototyping and manufacturing handoff.",
+    "The five stages every project goes through, from requirements to released drawings.",
 };
 
 export default function ProcessPage() {
@@ -18,8 +18,8 @@ export default function ProcessPage() {
     <>
       <PageHeader
         eyebrow="Process"
-        title={["From First Sketch", "to Production Release"]}
-        body="A clear, repeatable engineering process means fewer surprises. Each phase ends with something concrete you can review, test or hand to a supplier."
+        title={["From requirements to", "released drawings"]}
+        body="Every project goes through the same five stages. Each one ends with a deliverable you can review, test or send to a supplier."
       />
 
       <section className="mx-auto max-w-[1200px] px-5 pt-12 md:px-10">
@@ -85,15 +85,15 @@ export default function ProcessPage() {
               />
             </div>
             <h2 className="mt-6 text-[20px] font-semibold tracking-tight">
-              What every project includes
+              Included with every project
             </h2>
             <ul className="mt-5 space-y-3 text-[13px] text-muted">
               {[
-                "Weekly progress updates with screenshots and notes",
-                "Native CAD files plus STEP / PDF exports",
+                "Weekly progress updates",
+                "Native CAD files with STEP and PDF exports",
                 "Calculation and simulation reports",
                 "Revision-controlled drawings",
-                "A handover call to walk through the design",
+                "A final design review meeting",
               ].map((item) => (
                 <li key={item} className="flex gap-3">
                   <svg
@@ -117,10 +117,10 @@ export default function ProcessPage() {
       <section className="mx-auto grid max-w-[1200px] gap-10 px-5 pt-24 md:grid-cols-[1fr_1.4fr] md:px-10 md:pt-32">
         <Reveal>
           <h2 className="text-[30px] font-semibold leading-[1.12] tracking-[-0.02em] sm:text-[40px]">
-            Common Questions
+            Frequently asked questions
           </h2>
           <p className="mt-4 max-w-[360px] text-[14px] leading-relaxed text-muted">
-            Anything else? Send a message and I&apos;ll answer directly.
+            For anything not covered here, send me a message.
           </p>
         </Reveal>
 

@@ -43,7 +43,7 @@ export const projects: Project[] = [
     role: "Lead designer",
     duration: "14 weeks",
     summary:
-      "Concept body study for an open-wheel race car — surfacing, packaging and aero-driven iteration.",
+      "Body concept for an open-wheel race car, developed through packaging studies, surfacing and CFD.",
     challenge:
       "Package a driver, powertrain and cooling into a narrow-track body while keeping frontal area and drag as low as possible, without sacrificing stability at speed.",
     approach: [
@@ -79,7 +79,7 @@ export const projects: Project[] = [
     role: "Design engineer",
     duration: "10 weeks",
     summary:
-      "V-twin powertrain layout with cooling fins, crankcase and front cover modeled for assembly.",
+      "Layout of a 45° V-twin powertrain, with the crankcase, cylinders and front cover modeled for assembly.",
     challenge:
       "Fit a 45° V-twin, its primary drive and cooling fins inside a fixed frame envelope while keeping service access to the heads and cam cover.",
     approach: [
@@ -115,7 +115,7 @@ export const projects: Project[] = [
     role: "Design & analysis",
     duration: "8 weeks",
     summary:
-      "Exploded top-end assembly documenting every part, fastener and fit for manufacture.",
+      "Fully documented engine top end, with exploded views, torque data and GD&T drawings for service.",
     challenge:
       "Document a complete top-end rebuild so it could be serviced by technicians with no access to the original CAD.",
     approach: [
@@ -151,7 +151,7 @@ export const projects: Project[] = [
     role: "Structural analyst",
     duration: "12 weeks",
     summary:
-      "Oleo strut and retraction linkage sized for landing loads, drop tests and a compact stowed envelope.",
+      "Oleo strut and retraction linkage sized for landing loads and a compact stowed position.",
     challenge:
       "Size a cantilever main gear to absorb landing energy within the stroke limit, then retract it into a wing bay with tight clearances.",
     approach: [
@@ -163,7 +163,7 @@ export const projects: Project[] = [
     results: [
       { value: "1.5", label: "Min. safety factor" },
       { value: "82%", label: "Shock absorber efficiency" },
-      { value: "4", label: "Load cases analysed" },
+      { value: "4", label: "Load cases analyzed" },
     ],
     tools: ["CATIA V5", "ANSYS Mechanical", "MATLAB"],
     cover: {
@@ -197,7 +197,7 @@ export const projects: Project[] = [
       "Explore a high-speed rotorcraft layout that keeps the rotor unloaded in cruise while fitting a six-seat cabin.",
     approach: [
       "Sized the rotor and pusher propeller from mission requirements in MATLAB.",
-      "Built the fuselage outer mould line around the cabin and drive-shaft routing.",
+      "Built the fuselage outer mold line around the cabin and drive-shaft routing.",
       "Estimated drag build-up and trimmed the concept for level cruise.",
       "Presented the concept with layout drawings and a weight breakdown.",
     ],

@@ -11,7 +11,7 @@ import { testimonials } from "../_data/site";
 export const metadata: Metadata = {
   title: "Testimonials",
   description:
-    "What managers, clients and advisors say about working together on engineering projects.",
+    "Feedback from managers, clients and academic advisors.",
 };
 
 export default function TestimonialsPage() {
@@ -46,8 +46,8 @@ export default function TestimonialsPage() {
     <>
       <PageHeader
         eyebrow="Testimonials"
-        title={["Kind Words from People", "I've Worked With"]}
-        body="Managers, clients and advisors on what it's like to work together — from the first requirements meeting to the final drawing release."
+        title={["Feedback from clients", "and colleagues"]}
+        body="What managers, clients and academic advisors say about working with me."
       />
 
       <section className="mx-auto max-w-[1200px] px-5 pt-12 md:px-10">

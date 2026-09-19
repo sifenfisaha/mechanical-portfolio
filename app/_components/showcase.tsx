@@ -13,7 +13,7 @@ export function Showcase() {
     >
       <Reveal className="flex flex-wrap items-end justify-between gap-6">
         <SectionHeading title={showcase.title} body={showcase.body} />
-        <ArrowLink href="/showcase">Open the showcase</ArrowLink>
+        <ArrowLink href="/showcase">View all drawings</ArrowLink>
       </Reveal>
 
       <Reveal className="relative mt-10">

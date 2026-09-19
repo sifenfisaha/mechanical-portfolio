@@ -15,16 +15,16 @@ export default function NotFound() {
         Error 404
       </p>
       <h1 className="mt-4 text-balance text-[36px] font-semibold tracking-[-0.025em] sm:text-[48px]">
-        This page went off the drawing board
+        Page not found
       </h1>
       <p className="mt-4 max-w-[420px] text-[15px] leading-relaxed text-muted">
-        The page you were looking for doesn&apos;t exist or has been moved.
+        The page you&apos;re looking for doesn&apos;t exist or has moved.
       </p>
       <Link
         href="/"
         className="mt-8 rounded-[5px] bg-ink px-5 py-2.5 text-[13px] font-semibold text-page transition-colors hover:bg-ink-hover"
       >
-        Back to Home
+        Go to Homepage
       </Link>
     </section>
   );

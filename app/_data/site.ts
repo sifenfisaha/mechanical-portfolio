@@ -6,9 +6,9 @@ export const site = {
   role: "Mechanical Engineer",
   email: "hello@example.com",
   location: "City, Country",
-  availability: "Open to full-time roles and freelance projects",
+  availability: "Available for full-time roles and contract work",
   description:
-    "Mechanical engineer turning ideas into precise, manufacturable designs — from first sketch to tested prototype.",
+    "Mechanical engineer specializing in CAD, FEA and design for manufacture.",
   socials: {
     linkedin: "https://www.linkedin.com/",
     x: "https://x.com/",
@@ -34,7 +34,7 @@ export const tools = ["SolidWorks", "AutoCAD", "ANSYS", "Fusion 360", "MATLAB"];
 export const toolGroups = [
   {
     title: "CAD & Drafting",
-    body: "Parametric part and assembly modeling, surfacing and production drawings.",
+    body: "Part and assembly modeling, surfacing and detailed drawings to ASME Y14.5.",
     items: [
       { name: "SolidWorks", level: 95 },
       { name: "Fusion 360", level: 85 },
@@ -44,7 +44,7 @@ export const toolGroups = [
   },
   {
     title: "Simulation & Analysis",
-    body: "Structural, thermal and flow analysis to validate designs before they are built.",
+    body: "Structural, thermal and flow analysis to verify designs before anything is made.",
     items: [
       { name: "ANSYS Mechanical", level: 85 },
       { name: "ANSYS Fluent", level: 70 },
@@ -54,7 +54,7 @@ export const toolGroups = [
   },
   {
     title: "Programming & Data",
-    body: "Scripting calculations, processing test data and automating repetitive design work.",
+    body: "Scripts for engineering calculations, test data processing and design automation.",
     items: [
       { name: "MATLAB / Simulink", level: 85 },
       { name: "Python", level: 75 },
@@ -64,7 +64,7 @@ export const toolGroups = [
   },
   {
     title: "Manufacturing",
-    body: "Designing for the shop floor and getting hands-on with the first builds.",
+    body: "Hands-on experience with machining, additive manufacturing and fabrication.",
     items: [
       { name: "CNC machining & CAM", level: 75 },
       { name: "3D printing (FDM / SLA)", level: 90 },
@@ -86,25 +86,28 @@ export const methods = [
 ];
 
 export const work = {
-  title: ["From Concept to Creation with", "Engineering Excellence"],
-  body: "A selection of projects covering vehicle design, powertrain packaging and detailed mechanical assemblies.",
+  title: ["Selected projects"],
+  body: "Recent work in vehicle design, powertrains and aerospace structures. Each project has a full case study.",
 };
 
 export const process = {
-  title: ["Smart Engineering", "Solutions Built for You"],
-  body: "Every project follows the same disciplined path, so designs arrive validated, documented and ready to build.",
+  title: ["How I work"],
+  body: "Each design is modeled, analyzed and tested before drawings are released for manufacture.",
   steps: [
     {
       number: "01",
-      text: "Design & CAD modeling — parametric 3D models and production drawings with clear tolerances.",
+      title: "Design and CAD",
+      text: "Parametric 3D models and fully dimensioned drawings with clear tolerances.",
     },
     {
       number: "02",
-      text: "Simulation & analysis — FEA and CFD to prove strength, stiffness and thermal performance before cutting metal.",
+      title: "Analysis",
+      text: "FEA, CFD and hand calculations to confirm strength, stiffness and thermal performance.",
     },
     {
       number: "03",
-      text: "Prototyping & manufacturing — DFM reviews, supplier-ready files and hands-on testing of the first builds.",
+      title: "Prototyping and manufacture",
+      text: "Design-for-manufacture reviews, supplier-ready files and testing of first articles.",
     },
   ],
 };
@@ -112,98 +115,98 @@ export const process = {
 export const processPhases = [
   {
     number: "01",
-    title: "Discovery & requirements",
-    body: "Every project starts by understanding the problem: loads, operating environment, budget, volumes and the constraints that can't move. The output is a short requirements document everyone agrees on.",
+    title: "Requirements",
+    body: "Define the problem before designing anything: loads, operating conditions, cost targets, production volume and fixed constraints. The result is a short requirements document agreed with the client.",
     deliverables: ["Requirements brief", "Design constraints", "Success criteria"],
   },
   {
     number: "02",
-    title: "Concept & CAD modeling",
-    body: "Hand sketches become parametric 3D models. Several concepts are explored quickly, compared against the requirements, and the strongest one is developed into a full assembly.",
+    title: "Concept and CAD",
+    body: "Sketch several concepts, compare them against the requirements, and develop the strongest one into a complete parametric assembly.",
     deliverables: ["Concept sketches", "3D assembly model", "Trade-off matrix"],
   },
   {
     number: "03",
-    title: "Simulation & analysis",
-    body: "FEA, CFD and hand calculations check strength, stiffness, fatigue life and thermal behaviour. Weak points are found on screen, where fixing them is cheap.",
+    title: "Analysis",
+    body: "Check strength, stiffness, fatigue life and thermal behavior with FEA, CFD and hand calculations. Problems found at this stage are the cheapest to fix.",
     deliverables: ["FEA / CFD reports", "Safety factors", "Design revisions"],
   },
   {
     number: "04",
-    title: "Prototyping & testing",
-    body: "Critical parts are 3D printed or machined and tested against the success criteria. Test data feeds straight back into the model.",
+    title: "Prototyping and testing",
+    body: "Make critical parts by 3D printing or machining and test them against the requirements. Test results are fed back into the model.",
     deliverables: ["Prototype parts", "Test plan & results", "Updated model"],
   },
   {
     number: "05",
-    title: "Manufacturing handoff",
-    body: "The final design is released with fully dimensioned drawings, GD&T, a bill of materials and assembly instructions — everything a supplier needs to quote and build.",
+    title: "Release for manufacture",
+    body: "Release fully dimensioned drawings with GD&T, a bill of materials and assembly instructions, so a supplier can quote and build without follow-up questions.",
     deliverables: ["Production drawings", "Bill of materials", "Assembly guide"],
   },
 ];
 
 export const faqs = [
   {
-    question: "What kind of projects do you take on?",
+    question: "What types of projects do you work on?",
     answer:
-      "Mechanical design, product development, vehicle and powertrain components, fixtures and tooling, and analysis work on existing designs.",
+      "Mechanical design and product development, vehicle and powertrain components, fixtures and tooling, and analysis of existing designs.",
   },
   {
-    question: "Which file formats can you deliver?",
+    question: "Which file formats do you deliver?",
     answer:
-      "Native SolidWorks or Fusion 360 files, plus neutral formats like STEP, IGES and STL, and drawings as PDF or DWG.",
+      "Native SolidWorks or Fusion 360 files, neutral formats such as STEP, IGES and STL, and drawings in PDF or DWG.",
   },
   {
     question: "Can you work from an existing design?",
     answer:
-      "Yes. Existing parts can be reverse-engineered from drawings, measurements or scans, then improved, re-analysed or prepared for manufacture.",
+      "Yes. I can rebuild parts from drawings, measurements or 3D scans, then modify them, re-analyze them or prepare them for manufacture.",
   },
   {
     question: "How long does a typical project take?",
     answer:
-      "Small parts and analysis jobs usually take one to two weeks. Full assemblies with prototyping typically run six to twelve weeks.",
+      "Single parts and analysis jobs usually take one to two weeks. Complete assemblies with prototyping typically take six to twelve weeks.",
   },
 ];
 
 // Placeholder testimonials: swap in real quotes from supervisors, professors
 // or clients. Do not publish these as-is.
 export const testimonials = {
-  title: ["Shaping Tomorrow with", "Smarter Engineering"],
-  body: "What people I've worked with say about the process and the results.",
+  title: ["What clients and", "colleagues say"],
+  body: "Feedback from managers, clients and academic advisors.",
   items: [
     {
       quote:
-        "The design reviews were thorough and the drawings came back clean. Parts fit on the first build, which almost never happens.",
+        "Design reviews were thorough and the drawings were clean. The parts fit correctly on the first build.",
       name: "Jordan Malik",
       role: "Project Lead",
     },
     {
       quote:
-        "Clear thinking, careful analysis and a real feel for how things get manufactured. A dependable engineer to have on any team.",
+        "Careful analysis combined with a practical understanding of manufacturing. A dependable engineer on any team.",
       name: "Sara Bekele",
       role: "Engineering Manager",
     },
     {
       quote:
-        "Took a rough idea and turned it into a tested prototype on schedule, with documentation the shop floor could actually use.",
+        "Turned an early concept into a tested prototype on schedule, with documentation our workshop could use directly.",
       name: "Michael Tan",
       role: "Operations Director",
     },
     {
       quote:
-        "The FEA work caught a fatigue problem we had missed for two design cycles. The fix was simple once the data made it obvious.",
+        "The FEA work identified a fatigue issue we had missed across two design revisions. The data made the fix straightforward.",
       name: "Hana Girma",
       role: "Senior Design Engineer",
     },
     {
       quote:
-        "Communicates as well as designs. Every update came with a clear summary of what changed and why.",
+        "Clear, regular communication throughout. Every update explained what had changed and why.",
       name: "David Okoro",
       role: "Product Manager",
     },
     {
       quote:
-        "One of the most capable students I have supervised — rigorous with the analysis and practical in the workshop.",
+        "One of the most capable students I have supervised: rigorous in analysis and practical in the workshop.",
       name: "Dr. Elena Ruiz",
       role: "Faculty Advisor",
     },
@@ -211,8 +214,8 @@ export const testimonials = {
 };
 
 export const showcase = {
-  title: ["I Build Precise Designs for", "Real-World Challenges"],
-  body: "From rotorcraft to race cars, the goal is the same: designs that are light, strong and ready to build.",
+  title: ["Technical drawings"],
+  body: "Line drawings from recent projects in rotorcraft, vehicle and powertrain design.",
 };
 
 export const footerLinks = [

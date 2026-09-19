@@ -8,7 +8,7 @@ import { ProjectGrid } from "./project-grid";
 export const metadata: Metadata = {
   title: "Projects",
   description:
-    "Selected mechanical engineering projects: vehicle design, powertrain, aerospace structures and chassis systems.",
+    "Case studies in vehicle design, powertrains, aerospace structures and chassis systems.",
 };
 
 export default function ProjectsPage() {
@@ -16,8 +16,8 @@ export default function ProjectsPage() {
     <>
       <PageHeader
         eyebrow="Projects"
-        title={["Selected Engineering", "Work & Case Studies"]}
-        body="Vehicle bodies, powertrains, landing gear and suspension — each project taken from requirements through CAD, analysis and a design ready to build."
+        title={["Case studies in mechanical", "design and analysis"]}
+        body="Each case study covers the requirements, the design approach and the measured results, from vehicle bodies and powertrains to landing gear and suspension."
       />
 
       <section className="mx-auto max-w-[1200px] px-5 pt-12 md:px-10">

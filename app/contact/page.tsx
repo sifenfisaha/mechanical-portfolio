@@ -24,8 +24,8 @@ export default function ContactPage() {
     <>
       <PageHeader
         eyebrow="Contact"
-        title={["Let's Build Something", "That Works"]}
-        body="Share a project, a problem you're stuck on or a role you're hiring for. A short description is plenty to get started."
+        title={["Get in touch"]}
+        body="For project inquiries, job opportunities or technical questions, use the form below or email me directly."
       />
 
       <section className="mx-auto grid max-w-[1200px] gap-4 px-5 pt-12 md:grid-cols-[1.5fr_1fr] md:px-10">
@@ -59,7 +59,7 @@ export default function ContactPage() {
 
             <div className="mt-8">
               <p className="text-[11px] font-semibold uppercase tracking-[0.14em] text-muted">
-                Elsewhere
+                Profiles
               </p>
               <div className="mt-3">
                 <SocialLinks />

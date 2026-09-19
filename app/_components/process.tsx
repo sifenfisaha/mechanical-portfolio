@@ -38,15 +38,20 @@ export function Process() {
                 <span className="w-12 shrink-0 text-[32px] font-medium leading-none tracking-tight">
                   {step.number}
                 </span>
-                <p className="text-[13px] leading-relaxed text-muted">
-                  {step.text}
-                </p>
+                <div>
+                  <h3 className="text-[15px] font-semibold tracking-tight">
+                    {step.title}
+                  </h3>
+                  <p className="mt-1 text-[13px] leading-relaxed text-muted">
+                    {step.text}
+                  </p>
+                </div>
               </li>
             ))}
           </ol>
 
           <ArrowLink href="/process" className="mt-10">
-            See the full process
+            View the full process
           </ArrowLink>
         </div>
       </Reveal>
