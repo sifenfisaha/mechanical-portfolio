@@ -1,5 +1,5 @@
 import Image from "next/image";
-import engineSingle from "@/public/images/engine-single.webp";
+import roboticJoint from "@/public/images/sunex/robotic-joint-exploded.webp";
 import { contact } from "../_data/site";
 import { Button } from "./button";
 import { Reveal } from "./reveal";
@@ -28,12 +28,15 @@ export function CtaBand() {
               </Button>
             </div>
           </div>
-          <Image
-            src={engineSingle}
-            alt=""
-            sizes="(min-width: 768px) 360px, 80vw"
-            className="drawing relative mx-auto h-auto max-h-[260px] w-auto opacity-60"
-          />
+          <div className="relative overflow-hidden rounded-[10px] border border-line">
+            <Image
+              src={roboticJoint}
+              alt=""
+              placeholder="blur"
+              sizes="(min-width: 1200px) 420px, (min-width: 768px) 38vw, 100vw"
+              className="aspect-[16/10] h-auto w-full object-cover"
+            />
+          </div>
         </div>
       </Reveal>
     </section>

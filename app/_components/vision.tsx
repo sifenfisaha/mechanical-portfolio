@@ -1,5 +1,5 @@
 import Image from "next/image";
-import helicopter from "@/public/images/helicopter.webp";
+import roboticArm from "@/public/images/sunex/robotic-arm-welding.webp";
 import { vision } from "../_data/site";
 import { Reveal } from "./reveal";
 import { SectionHeading } from "./section-heading";
@@ -42,12 +42,13 @@ export function Vision() {
                 </li>
               ))}
             </ul>
-            <div className="drawing-glow mt-8">
+            <div className="mt-8 overflow-hidden rounded-[10px] border border-line">
               <Image
-                src={helicopter}
-                alt=""
+                src={roboticArm}
+                alt="An industrial robotic arm welding a part on an automated production line"
+                placeholder="blur"
                 sizes="(min-width: 1024px) 480px, 100vw"
-                className="drawing mx-auto h-auto w-full max-w-[460px] opacity-60"
+                className="aspect-[16/10] h-auto w-full object-cover"
               />
             </div>
           </Reveal>

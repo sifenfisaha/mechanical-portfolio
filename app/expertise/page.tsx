@@ -1,4 +1,6 @@
 import type { Metadata } from "next";
+import Image from "next/image";
+import excavator from "@/public/images/sunex/excavator.webp";
 import { Capabilities } from "../_components/capabilities";
 import { CtaBand } from "../_components/cta-band";
 import { PageHeader } from "../_components/page-header";
@@ -114,6 +116,21 @@ export default function ExpertisePage() {
         title={["Mechanical design to", "intelligent systems."]}
         body="The engineering areas I work in, and the software and tools I use to design, model, document and explore mechanical and automated systems."
       />
+
+      <section className="mx-auto max-w-[1200px] px-5 pt-10 md:px-10">
+        <Reveal>
+          <div className="overflow-hidden rounded-[12px] border border-line bg-panel">
+            <Image
+              src={excavator}
+              alt="A SUNEX LAB hydraulic excavator with its boom, arm, bucket and tracked undercarriage"
+              placeholder="blur"
+              preload
+              sizes="(min-width: 1200px) 1120px, 100vw"
+              className="aspect-[16/9] h-auto w-full object-cover md:aspect-[21/9]"
+            />
+          </div>
+        </Reveal>
+      </section>
 
       <Capabilities showLink={false} />
 

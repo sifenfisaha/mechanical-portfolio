@@ -1,9 +1,16 @@
 import type { StaticImageData } from "next/image";
+import aeroRaceCar from "@/public/images/sunex/cad-aero-race-car.webp";
+import coaxialHelicopter from "@/public/images/sunex/cad-coaxial-helicopter.webp";
+import cylinderHead from "@/public/images/sunex/cad-cylinder-head-exploded.webp";
+import landingGear from "@/public/images/sunex/cad-landing-gear.webp";
+import vTwin from "@/public/images/sunex/cad-v-twin-powertrain.webp";
+import hydraulicLift from "@/public/images/sunex/hydraulic-lift.webp";
+import injeraMachine from "@/public/images/sunex/injera-machine.webp";
 
-// Real SUNEX LAB projects. No project images have been supplied yet, so every
-// gallery item is a titled slot: add `src` (an imported image from
-// /public/images/...) and `alt` to a slot and it renders the picture instead
-// of the placeholder. The first gallery item is used as the project cover.
+// Real SUNEX LAB projects. A gallery item without `src` is a titled slot that
+// renders a placeholder; add `src` (an imported image from /public/images/...)
+// and `alt` to show the picture instead. The first gallery item is used as
+// the project cover.
 //
 // Only record facts the owner has confirmed. Targets stay labelled as
 // targets; do not add measured results until they are documented.
@@ -108,7 +115,11 @@ export const projects: Project[] = [
       "Test data and performance measurements will be added here once documented.",
     ],
     gallery: [
-      { title: "Complete machine assembly" },
+      {
+        title: "Fully automatic injera baking machine",
+        src: injeraMachine,
+        alt: "The SUNEX injera baking machine with its batter dispenser over the baking plate and a touchscreen control panel",
+      },
       { title: "Exploded assembly view" },
       { title: "Batter tank design" },
       { title: "Spreading mechanism" },
@@ -180,7 +191,11 @@ export const projects: Project[] = [
       "Calculation results and dimensioned drawings will be added here once published.",
     ],
     gallery: [
-      { title: "Complete hydraulic lift assembly" },
+      {
+        title: "Hydraulic hand lift",
+        src: hydraulicLift,
+        alt: "A yellow and black hydraulic hand lift with forks, mast, lifting cylinder and steering handle",
+      },
       { title: "Hydraulic cylinder" },
       { title: "Lifting mechanism" },
       { title: "Structural frame" },
@@ -250,10 +265,31 @@ export const projects: Project[] = [
       "These are design exercises and learning projects, not commissioned work.",
     ],
     gallery: [
-      { title: "Individual models" },
-      { title: "Assembly renders" },
-      { title: "Exploded views" },
-      { title: "Engineering drawings" },
+      {
+        title: "Aero race car concept assembly (SolidWorks)",
+        src: aeroRaceCar,
+        alt: "Open-wheel race car concept assembly with front wing, bargeboards, suspension links and rear diffuser in SolidWorks",
+      },
+      {
+        title: "Coaxial-rotor compound helicopter airframe (CATIA V5)",
+        src: coaxialHelicopter,
+        alt: "Coaxial-rotor compound helicopter airframe with pusher propeller and wings modeled in CATIA V5",
+      },
+      {
+        title: "Aircraft main landing gear with kinematics (CATIA V5)",
+        src: landingGear,
+        alt: "Aircraft main landing gear assembly with oleo strut, torque links and retraction links in CATIA V5",
+      },
+      {
+        title: "V-twin powertrain assembly (CATIA V5)",
+        src: vTwin,
+        alt: "V-twin engine assembly with crankcase, front and rear cylinders and transmission case in CATIA V5",
+      },
+      {
+        title: "DOHC cylinder head exploded view (SolidWorks)",
+        src: cylinderHead,
+        alt: "Exploded view of a DOHC cylinder head showing camshafts, valve springs, valves, spark plugs and gasket in SolidWorks",
+      },
     ],
   },
 ];

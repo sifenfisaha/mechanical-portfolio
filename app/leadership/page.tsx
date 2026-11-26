@@ -150,12 +150,65 @@ export default function LeadershipPage() {
                     <p className="mt-2 text-[13px] leading-relaxed text-muted">
                       {cert.body}
                     </p>
+                    {(cert.issuer || cert.date) && (
+                      <p className="mt-2 text-[12px] text-ink/75">
+                        {[cert.issuer, cert.date].filter(Boolean).join(" · ")}
+                      </p>
+                    )}
+                    {cert.href && (
+                      <a
+                        href={cert.href}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="mt-3 inline-flex items-center gap-1.5 text-[13px] font-semibold text-accent-text hover:underline"
+                      >
+                        View certificate
+                        <span className="sr-only"> (PDF, opens in a new tab)</span>
+                        <span aria-hidden="true">↗</span>
+                      </a>
+                    )}
                   </div>
                 </article>
               </Reveal>
             ))}
           </div>
         </div>
+
+        <Reveal className="mt-4">
+          <div className="rounded-[12px] border border-line bg-panel p-7 sm:p-10">
+            <h3 className="text-[18px] font-semibold tracking-tight">
+              More Certificates
+            </h3>
+            <ul className="mt-6 grid gap-x-8 sm:grid-cols-2">
+              {education.moreCertificates.map((cert) => (
+                <li key={cert.title} className="border-t border-line">
+                  <a
+                    href={cert.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="group flex items-start justify-between gap-4 py-4"
+                  >
+                    <span>
+                      <span className="block text-[14px] font-medium group-hover:text-accent-text">
+                        {cert.title}
+                      </span>
+                      <span className="mt-1 block text-[12px] text-muted">
+                        {cert.issuer} · {cert.date}
+                      </span>
+                    </span>
+                    <span
+                      aria-hidden="true"
+                      className="shrink-0 text-[13px] font-semibold text-accent-text"
+                    >
+                      ↗
+                    </span>
+                    <span className="sr-only"> (PDF, opens in a new tab)</span>
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </Reveal>
 
         <Reveal className="mt-4">
           <div className="rounded-[12px] border border-line bg-panel p-7 sm:p-10">

@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Image from "next/image";
-import suspension from "@/public/images/suspension.webp";
+import portrait from "@/public/images/sunex/suhayl-portrait.webp";
 import { Button } from "../_components/button";
 import { CtaBand } from "../_components/cta-band";
 import { PageHeader } from "../_components/page-header";
@@ -81,13 +81,19 @@ export default function AboutPage() {
           </div>
         </Reveal>
 
-        <Reveal delay={100} className="drawing-glow">
-          <Image
-            src={suspension}
-            alt=""
-            sizes="(min-width: 768px) 620px, 100vw"
-            className="drawing h-auto w-full opacity-70"
-          />
+        <Reveal delay={100}>
+          <figure className="overflow-hidden rounded-[12px] border border-line bg-panel">
+            <Image
+              src={portrait}
+              alt={`Portrait of ${site.owner}`}
+              placeholder="blur"
+              sizes="(min-width: 1200px) 620px, (min-width: 768px) 52vw, 100vw"
+              className="aspect-[5/4] h-auto w-full object-cover object-top"
+            />
+            <figcaption className="border-t border-line px-6 py-4 text-[12px] text-muted">
+              {site.owner} · {site.role}
+            </figcaption>
+          </figure>
         </Reveal>
       </section>
 

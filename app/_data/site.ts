@@ -390,15 +390,59 @@ export const education = {
     location: "Ethiopia",
     status: "In Progress",
   },
+  // Featured certifications, shown as cards. Each `href` is a PDF in
+  // /public/certificates.
   certifications: [
     {
-      title: "Certified SolidWorks Professional (CSWP)",
+      title: "SOLIDWORKS Design Professional (CSWP)",
       body: "Professional certification demonstrating knowledge and proficiency in SolidWorks.",
+      issuer: "Dassault Systèmes",
+      date: "June 2026",
+      href: "/certificates/solidworks-design-professional-cswp.pdf",
+    },
+    {
+      title: "SOLIDWORKS Design Associate (CSWA)",
+      body: "Associate certification in SolidWorks part, assembly and drawing fundamentals.",
+      issuer: "Dassault Systèmes",
+      date: "June 2026",
+      href: "/certificates/solidworks-design-associate-cswa.pdf",
+    },
+    {
+      title: "SOLIDWORKS Simulation Associate",
+      body: "Associate certification in finite element analysis with SolidWorks Simulation.",
+      issuer: "Dassault Systèmes",
+      date: "September 2026",
+      href: "/certificates/solidworks-simulation-associate.pdf",
     },
     {
       title: "ALX Pathway Foundations",
       body: "Graduate of the ALX Pathway Foundations program.",
     },
+  ] as {
+    title: string;
+    body: string;
+    issuer?: string;
+    date?: string;
+    href?: string;
+  }[],
+  // Remaining certificates, shown as a compact list.
+  moreCertificates: [
+    { title: "SOLIDWORKS Additive Manufacturing Associate", issuer: "Dassault Systèmes", date: "June 2026", href: "/certificates/solidworks-additive-manufacturing-associate.pdf" },
+    { title: "SOLIDWORKS Electrical Design Associate", issuer: "Dassault Systèmes", date: "June 2026", href: "/certificates/solidworks-electrical-design-associate.pdf" },
+    { title: "SOLIDWORKS Sustainability Associate", issuer: "Dassault Systèmes", date: "June 2026", href: "/certificates/solidworks-sustainability-associate.pdf" },
+    { title: "SOLIDWORKS xDesign Associate", issuer: "Dassault Systèmes", date: "June 2026", href: "/certificates/solidworks-xdesign-associate.pdf" },
+    { title: "SOLIDWORKS xShape Associate", issuer: "Dassault Systèmes", date: "June 2026", href: "/certificates/solidworks-xshape-associate.pdf" },
+    { title: "SOLIDWORKS xMold Associate", issuer: "Dassault Systèmes", date: "June 2026", href: "/certificates/solidworks-xmold-associate.pdf" },
+    { title: "SOLIDWORKS PDM Associate", issuer: "Dassault Systèmes", date: "August 2026", href: "/certificates/solidworks-pdm-associate.pdf" },
+    { title: "Collaborative Designer for SOLIDWORKS Associate", issuer: "Dassault Systèmes", date: "August 2026", href: "/certificates/collaborative-designer-for-solidworks-associate.pdf" },
+    { title: "ENOVIA Collaborative Industry Innovator Associate", issuer: "Dassault Systèmes", date: "August 2026", href: "/certificates/enovia-collaborative-industry-innovator-associate.pdf" },
+    { title: "3DSwymer Associate", issuer: "Dassault Systèmes", date: "August 2026", href: "/certificates/3dswymer-associate.pdf" },
+    { title: "CATIA V5 Basics", issuer: "Great Learning Academy", date: "July 2024", href: "/certificates/catia-v5-basics.pdf" },
+    { title: "Google Data Analytics Professional Certificate", issuer: "Google / Coursera", date: "July 2026", href: "/certificates/google-data-analytics.pdf" },
+    { title: "Introduction to Data Analysis Using Python", issuer: "Google / Coursera", date: "July 2026", href: "/certificates/intro-data-analysis-python.pdf" },
+    { title: "Adobe Visual Design: Photoshop, Illustrator, InDesign", issuer: "O'Reilly", date: "March 2026", href: "/certificates/adobe-visual-design.pdf" },
+    { title: "Photoshop CC Basics", issuer: "O'Reilly", date: "February 2026", href: "/certificates/photoshop-cc-basics.pdf" },
+    { title: "Digital Marketing Analytics", issuer: "O'Reilly", date: "January 2026", href: "/certificates/digital-marketing-analytics.pdf" },
   ],
   development: [
     "Data Engineering learning through ALX",
