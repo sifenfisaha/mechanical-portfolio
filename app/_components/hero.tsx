@@ -1,5 +1,5 @@
 import Image from "next/image";
-import engineV from "@/public/images/engine-v.webp";
+import sunexMachine from "@/public/images/sunex/sunex-machine.webp";
 import { hero, site } from "../_data/site";
 import { Button } from "./button";
 
@@ -9,7 +9,7 @@ export function Hero() {
   return (
     <section
       id="top"
-      className="mx-auto grid max-w-[1200px] items-center gap-10 px-5 pb-14 pt-12 md:grid-cols-[1.1fr_1fr] md:px-10 md:pb-20 md:pt-20"
+      className="mx-auto grid max-w-[1200px] items-center gap-10 px-5 pb-14 pt-[clamp(16px,4vh,48px)] md:min-h-[calc(100svh-72px)] md:grid-cols-[1.1fr_1fr] md:px-10 md:py-[clamp(16px,4vh,48px)]"
     >
       <div className="relative z-10">
         <p className="flex flex-wrap items-center gap-x-2 gap-y-1 text-[12px] font-semibold uppercase tracking-[0.16em] text-muted">
@@ -18,7 +18,7 @@ export function Hero() {
           <span>{site.owner}</span>
         </p>
 
-        <h1 className="mt-6 text-[36px] font-extrabold uppercase leading-[1.02] tracking-[-0.02em] sm:text-[52px] lg:text-[60px]">
+        <h1 className="mt-[clamp(12px,2.6vh,24px)] text-[length:clamp(28px,min(9vw,5.4vh),52px)] font-extrabold uppercase leading-[1.02] tracking-[-0.02em] md:text-[length:clamp(30px,min(5.4vw,6.2vh),60px)]">
           {hero.title.map((line, i) => (
             <span
               key={line}
@@ -29,7 +29,7 @@ export function Hero() {
           ))}
         </h1>
 
-        <ul className="mt-6 flex flex-wrap gap-2" aria-label="Disciplines">
+        <ul className="mt-[clamp(12px,2.6vh,24px)] flex flex-wrap gap-2" aria-label="Disciplines">
           {hero.subheadline.map((item) => (
             <li
               key={item}
@@ -40,11 +40,11 @@ export function Hero() {
           ))}
         </ul>
 
-        <p className="mt-6 max-w-[460px] text-[15px] leading-relaxed text-muted">
+        <p className="mt-[clamp(12px,2.6vh,24px)] max-w-[460px] text-[15px] leading-relaxed text-muted">
           {hero.body}
         </p>
 
-        <div className="mt-8 flex flex-wrap gap-3">
+        <div className="mt-[clamp(16px,3.2vh,32px)] flex flex-wrap gap-3">
           <Button href={primary.href}>{primary.label}</Button>
           <Button href={secondary.href} variant="secondary">
             {secondary.label}
@@ -54,7 +54,7 @@ export function Hero() {
           </Button>
         </div>
 
-        <p className="mt-10 flex items-center gap-3 text-[13px] font-semibold tracking-tight text-ink/80">
+        <p className="mt-[clamp(16px,3.6vh,40px)] flex items-center gap-3 text-[13px] font-semibold tracking-tight text-ink/80">
           <span className="h-px w-8 bg-accent" aria-hidden="true" />
           {hero.tagline}
         </p>
@@ -62,14 +62,16 @@ export function Hero() {
 
       <div className="relative">
         <div className="blueprint-grid pointer-events-none absolute -inset-10" />
-        <div className="drawing-glow pointer-events-none absolute inset-0" />
-        <Image
-          src={engineV}
-          alt=""
-          preload
-          sizes="(min-width: 768px) 560px, 100vw"
-          className="drawing relative h-auto w-full opacity-80"
-        />
+        <div className="relative overflow-hidden rounded-[12px] border border-line bg-panel-2">
+          <Image
+            src={sunexMachine}
+            alt="A yellow and black SUNEX LAB mechanical system with linkages, gears and an electric drive in a workshop"
+            preload
+            placeholder="blur"
+            sizes="(min-width: 1200px) 540px, (min-width: 768px) 45vw, 100vw"
+            className="aspect-[4/3] h-auto w-full object-cover"
+          />
+        </div>
       </div>
     </section>
   );
