@@ -12,10 +12,30 @@ const manrope = Manrope({
 
 export const metadata: Metadata = {
   title: {
-    default: `${site.name} | ${site.role}`,
-    template: `%s | ${site.name}`,
+    default: `${site.brand} | ${site.owner}, ${site.role}`,
+    template: `%s | ${site.brand}`,
   },
   description: site.description,
+  applicationName: site.brand,
+  authors: [{ name: site.owner }],
+  keywords: [
+    "SUNEX LAB",
+    site.owner,
+    "mechanical design",
+    "CAD",
+    "SolidWorks",
+    "CATIA V5",
+    "product design",
+    "automation",
+    "robotics",
+    "Ethiopia",
+  ],
+  openGraph: {
+    type: "website",
+    siteName: site.brand,
+    title: `${site.brand} | ${site.tagline}`,
+    description: site.description,
+  },
 };
 
 // Runs before first paint. Every visit starts from the system setting; a

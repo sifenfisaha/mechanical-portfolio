@@ -37,12 +37,12 @@ export function ProjectGrid({ projects }: { projects: Project[] }) {
               aria-pressed={selected}
               className={`rounded-full border px-4 py-2 text-[12px] font-semibold transition-colors ${
                 selected
-                  ? "border-ink bg-ink text-page"
+                  ? "border-accent bg-accent text-accent-ink"
                   : "border-line text-ink/70 hover:border-ink/30 hover:text-ink"
               }`}
             >
               {category}
-              <span className={selected ? "ml-1.5 text-page/60" : "ml-1.5 text-muted"}>
+              <span className={selected ? "ml-1.5 text-accent-ink/60" : "ml-1.5 text-muted"}>
                 {count}
               </span>
             </button>

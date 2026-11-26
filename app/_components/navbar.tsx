@@ -30,7 +30,9 @@ export function Navbar() {
   }
 
   const isActive = (href: string) =>
-    pathname === href || pathname.startsWith(`${href}/`);
+    href === "/"
+      ? pathname === "/"
+      : pathname === href || pathname.startsWith(`${href}/`);
 
   // Slide the highlight pill under a link, or fade it out.
   const movePill = useCallback((el: HTMLElement | null) => {
@@ -180,9 +182,9 @@ export function Navbar() {
               <ThemeToggle />
               <Link
                 href="/contact"
-                className="group hidden h-10 items-center gap-1.5 whitespace-nowrap rounded-[10px] bg-ink px-4 text-[13px] font-semibold text-page transition-colors hover:bg-ink-hover sm:inline-flex"
+                className="group hidden h-10 items-center gap-1.5 whitespace-nowrap rounded-[10px] bg-accent px-4 text-[13px] font-semibold text-accent-ink transition-[filter] hover:brightness-110 sm:inline-flex"
               >
-                Hire Me
+                Let&apos;s Connect
                 <ArrowUpRight className="transition-transform duration-300 group-hover:-translate-y-0.5 group-hover:translate-x-0.5" />
               </Link>
               <button
@@ -256,11 +258,11 @@ export function Navbar() {
                   style={{
                     transitionDelay: open ? `${60 + nav.length * 45}ms` : "0ms",
                   }}
-                  className={`mt-2 flex h-12 items-center justify-center gap-1.5 rounded-[10px] bg-ink text-[14px] font-semibold text-page transition-[opacity,transform,background-color] duration-500 ${EASE} hover:bg-ink-hover ${
+                  className={`mt-2 flex h-12 items-center justify-center gap-1.5 rounded-[10px] bg-accent text-[14px] font-semibold text-accent-ink transition-[opacity,transform,filter] duration-500 ${EASE} hover:brightness-110 ${
                     open ? "translate-y-0 opacity-100" : "-translate-y-2 opacity-0"
                   }`}
                 >
-                  Hire Me
+                  Let&apos;s Connect
                   <ArrowUpRight />
                 </Link>
               </nav>

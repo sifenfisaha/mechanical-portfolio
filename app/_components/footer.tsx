@@ -12,12 +12,15 @@ export function Footer() {
         <div className="grid gap-12 md:grid-cols-[1.4fr_2fr]">
           <div>
             <Logo />
-            <p className="mt-4 max-w-[280px] text-[13px] leading-relaxed text-muted">
-              {site.description}
+            <p className="mt-4 max-w-[300px] text-[13px] leading-relaxed text-muted">
+              {site.disciplines}
+            </p>
+            <p className="mt-3 text-[14px] font-semibold text-accent-text">
+              {site.tagline}
             </p>
             <a
               href={`mailto:${site.email}`}
-              className="mt-6 inline-block text-[13px] font-semibold underline decoration-line underline-offset-4 transition-colors hover:decoration-ink"
+              className="mt-6 inline-block text-[13px] font-semibold underline decoration-line underline-offset-4 transition-colors hover:decoration-accent"
             >
               {site.email}
             </a>
@@ -57,16 +60,16 @@ export function Footer() {
           </div>
         </div>
 
-        <div className="mt-16 flex items-center justify-between border-t border-line pt-6">
+        <div className="mt-16 flex flex-wrap items-center justify-between gap-4 border-t border-line pt-6">
           <p className="text-[12px] text-muted">
-            © {year} {site.name}. All rights reserved.
+            © {year} {site.brand}. All Rights Reserved.
           </p>
           <SocialLinks />
         </div>
 
         <p className="mt-6 text-[11px] leading-relaxed text-muted/70">
-          Illustrations adapted from public-domain U.S. patent drawings and
-          L&apos;Aérophile (1936) technical plates.
+          Decorative line illustrations adapted from public-domain U.S. patent
+          drawings and L&apos;Aérophile (1936) technical plates.
         </p>
       </div>
     </footer>

@@ -1,284 +1,260 @@
 import type { StaticImageData } from "next/image";
-import racecar from "@/public/images/racecar.webp";
-import racecarFront from "@/public/images/racecar-front.webp";
-import engineV from "@/public/images/engine-v.webp";
-import engineVtwin from "@/public/images/engine-vtwin.webp";
-import engineExploded from "@/public/images/engine-exploded.webp";
-import engineSingle from "@/public/images/engine-single.webp";
-import landingGear from "@/public/images/landing-gear.webp";
-import landingGear2 from "@/public/images/landing-gear-2.webp";
-import landingGear3 from "@/public/images/landing-gear-3.webp";
-import helicopter from "@/public/images/helicopter.webp";
-import motorcycle from "@/public/images/motorcycle.webp";
-import motorcycle2 from "@/public/images/motorcycle-2.webp";
-import suspension from "@/public/images/suspension.webp";
 
-// Sample case studies that show how the project pages work. Replace each one
-// with a real project, its own images and real results before publishing.
+// Real SUNEX LAB projects. No project images have been supplied yet, so every
+// gallery item is a titled slot: add `src` (an imported image from
+// /public/images/...) and `alt` to a slot and it renders the picture instead
+// of the placeholder. The first gallery item is used as the project cover.
+//
+// Only record facts the owner has confirmed. Targets stay labelled as
+// targets; do not add measured results until they are documented.
 
-export type Figure = { src: StaticImageData; alt: string; caption: string };
+export type GalleryItem = {
+  title: string;
+  src?: StaticImageData;
+  alt?: string;
+};
 
 export type Project = {
   slug: string;
   title: string;
+  /** Short tag used for filtering, e.g. "Automation". */
   category: string;
-  year: string;
+  /** Full category line from the brief. */
+  categories: string[];
+  /** Honest label for what kind of project this is. */
+  type: string;
   role: string;
-  duration: string;
+  institution?: string;
+  period?: string;
   summary: string;
-  challenge: string;
-  approach: string[];
-  results: { value: string; label: string }[];
+  overview: string[];
+  objective: string;
+  contributions: string[];
+  /** Heading for the contributions list; defaults to "My contributions". */
+  contributionsLabel?: string;
+  methodology: string[];
   tools: string[];
-  cover: Figure;
-  gallery: Figure[];
+  details: { title: string; text: string }[];
+  finalDesign: string;
+  highlight: string;
+  results: { value: string; label: string }[];
+  limitations: string[];
+  gallery: GalleryItem[];
 };
 
 export const projects: Project[] = [
   {
-    slug: "aero-race-car-concept",
-    title: "Aero Race Car Concept",
-    category: "Vehicle Design",
-    year: "2025",
-    role: "Lead designer",
-    duration: "14 weeks",
+    slug: "automatic-injera-baking-machine",
+    title: "Fully Automatic Injera Baking Machine",
+    category: "Automation",
+    categories: ["Mechanical Design", "Automation", "Product Development"],
+    type: "University engineering project",
+    role: "Lead Mechanical Designer & Automation Programmer",
+    institution: "Adama Science and Technology University",
+    period: "July–September 2025",
     summary:
-      "Body concept for an open-wheel race car, developed through packaging studies, surfacing and CFD.",
-    challenge:
-      "Package a driver, powertrain and cooling into a narrow-track body while keeping frontal area and drag as low as possible, without sacrificing stability at speed.",
-    approach: [
-      "Built a skeleton layout around driver ergonomics and wheelbase targets before any surfacing.",
-      "Modeled the body with continuous-curvature surfaces so it could be milled as a single foam buck.",
-      "Ran CFD sweeps across ride heights and yaw angles to tune the nose and rear deck.",
-      "Checked every panel for draft and tool access ahead of composite lay-up.",
+      "An automated solution for traditional injera production, designed to improve efficiency and reduce manual operations.",
+    overview: [
+      "The Fully Automatic Injera Baking Machine is an engineering project focused on developing an automated solution for traditional injera production.",
+      "As the lead mechanical designer and automation programmer, I contributed to the development of the machine's mechanical structure, component layout, batter tank, spreading mechanism, and automation concept.",
     ],
+    objective:
+      "Improve production efficiency, reduce manual operations, and develop a more systematic baking process, with a design target of approximately 80 injera per hour.",
+    contributions: [
+      "Mechanical design and 3D modeling using SolidWorks",
+      "Development of the batter tank",
+      "Design of the batter spreading mechanism",
+      "Machine frame and component arrangement",
+      "Automation programming and control-system integration",
+      "Engineering design documentation and presentation",
+    ],
+    methodology: [
+      "Defined the design objective around production efficiency, reduced manual handling and a target output of about 80 injera per hour.",
+      "Modeled the machine's mechanical structure and components in SolidWorks.",
+      "Developed the batter tank and the batter spreading mechanism as the core process subsystems.",
+      "Arranged the machine frame and component layout around those subsystems.",
+      "Developed the automation concept, programmed the control logic and integrated the control system.",
+      "Documented the engineering design and presented it.",
+    ],
+    tools: ["SolidWorks", "Mechanical Design", "Automation", "Control Systems"],
+    details: [
+      {
+        title: "Batter tank",
+        text: "Batter storage for the automated baking process, developed as part of the machine's mechanical design.",
+      },
+      {
+        title: "Spreading mechanism",
+        text: "The mechanism that spreads batter for baking, replacing a step that is traditionally done by hand.",
+      },
+      {
+        title: "Frame & component layout",
+        text: "The machine frame and the arrangement of components that carries the process subsystems.",
+      },
+      {
+        title: "Automation & control",
+        text: "The automation concept, control programming and control-system integration that coordinate the baking process.",
+      },
+    ],
+    finalDesign:
+      "A complete machine assembly combining the frame, batter tank, spreading mechanism and automation system into a single production unit.",
+    highlight:
+      "A multidisciplinary engineering project combining mechanical design, automation, and practical product development.",
     results: [
-      { value: "−18%", label: "Drag vs. baseline" },
-      { value: "42 / 58", label: "Front / rear balance" },
-      { value: "6", label: "Design iterations" },
+      { value: "≈80", label: "Injera per hour (design target)" },
+      { value: "3", label: "Disciplines: mechanical, automation, product" },
     ],
-    tools: ["SolidWorks", "ANSYS Fluent", "Rhino"],
-    cover: {
-      src: racecar,
-      alt: "Perspective line drawing of an aerodynamic open-wheel race car",
-      caption: "Three-quarter view of the final body surfaces.",
-    },
+    limitations: [
+      "The production rate shown is the design target, not a measured result.",
+      "Test data and performance measurements will be added here once documented.",
+    ],
     gallery: [
-      {
-        src: racecarFront,
-        alt: "Front view line drawing of a prototype race car",
-        caption: "Front elevation showing the narrow nose and wheel pods.",
-      },
+      { title: "Complete machine assembly" },
+      { title: "Exploded assembly view" },
+      { title: "Batter tank design" },
+      { title: "Spreading mechanism" },
+      { title: "Machine frame" },
+      { title: "Technical drawings" },
+      { title: "Machine photographs" },
+      { title: "Motion study / design animation" },
     ],
   },
   {
-    slug: "v-twin-powertrain",
-    title: "V-Twin Powertrain Layout",
-    category: "Powertrain",
-    year: "2025",
-    role: "Design engineer",
-    duration: "10 weeks",
+    slug: "hydraulic-hand-lift",
+    title: "Hydraulic Hand Lift Design",
+    category: "Hydraulic Systems",
+    categories: ["Mechanical Design", "Hydraulic Systems", "Engineering Analysis"],
+    type: "Design project",
+    role: "Mechanical Design & Engineering Analysis",
     summary:
-      "Layout of a 45° V-twin powertrain, with the crankcase, cylinders and front cover modeled for assembly.",
-    challenge:
-      "Fit a 45° V-twin, its primary drive and cooling fins inside a fixed frame envelope while keeping service access to the heads and cam cover.",
-    approach: [
-      "Reverse-engineered the frame hard points into a master layout sketch.",
-      "Modeled the crankcase halves with realistic draft, bosses and parting lines.",
-      "Ran a thermal study on fin spacing to balance cooling against weight.",
-      "Produced an interference-free assembly with a full bill of materials.",
+      "A hydraulic lifting concept intended to reduce manual lifting effort and improve material-handling practices.",
+    overview: [
+      "This project focused on developing a hydraulic lifting solution intended to reduce manual lifting effort and improve material-handling practices.",
+      "The design explored the application of hydraulic mechanisms, structural components, and mechanical principles to develop a practical lifting concept.",
+      "My contribution focused on the SolidWorks design, component arrangement, engineering calculations, and technical presentation.",
     ],
-    results: [
-      { value: "0", label: "Interferences at release" },
-      { value: "140+", label: "Parts modeled" },
-      { value: "−9%", label: "Cylinder head mass" },
+    objective:
+      "Develop a practical lifting concept that reduces manual lifting effort and improves material-handling practices, with ergonomic and workplace safety in mind.",
+    contributions: [
+      "3D mechanical modeling using SolidWorks",
+      "Assembly development",
+      "Hydraulic component arrangement",
+      "Engineering calculations",
+      "Design evaluation",
+      "Ergonomic and workplace safety considerations",
+      "Technical presentation",
     ],
-    tools: ["SolidWorks", "SolidWorks Simulation", "AutoCAD"],
-    cover: {
-      src: engineVtwin,
-      alt: "Front view line drawing of a V-twin engine",
-      caption: "Front elevation of the finished engine assembly.",
-    },
+    methodology: [
+      "Framed the problem around manual lifting effort and material-handling practices.",
+      "Modeled the lift components and developed the assembly in SolidWorks.",
+      "Arranged the hydraulic components within the structure.",
+      "Carried out engineering calculations and evaluated the design.",
+      "Reviewed the design for ergonomics and workplace safety.",
+      "Prepared the technical presentation.",
+    ],
+    tools: ["SolidWorks", "Hydraulic Systems", "Engineering Mechanics"],
+    details: [
+      {
+        title: "Hydraulic cylinder",
+        text: "The hydraulic actuator that provides the lifting force.",
+      },
+      {
+        title: "Lifting mechanism",
+        text: "The mechanism that transfers the hydraulic force to the load.",
+      },
+      {
+        title: "Structural frame",
+        text: "The frame that supports the load and carries the hydraulic components.",
+      },
+      {
+        title: "Ergonomics & safety",
+        text: "Design considerations for safer, lower-effort lifting in the workplace.",
+      },
+    ],
+    finalDesign:
+      "A complete hydraulic lift assembly with its cylinder, lifting mechanism and structural frame modeled in SolidWorks.",
+    highlight:
+      "Applying mechanical engineering principles to develop a solution for practical material-handling challenges.",
+    results: [],
+    limitations: [
+      "This is a design concept developed through CAD modeling and engineering calculations.",
+      "Calculation results and dimensioned drawings will be added here once published.",
+    ],
     gallery: [
-      {
-        src: engineV,
-        alt: "Perspective line drawing of a V-twin engine with numbered components",
-        caption: "Ballooned perspective used for the assembly manual.",
-      },
+      { title: "Complete hydraulic lift assembly" },
+      { title: "Hydraulic cylinder" },
+      { title: "Lifting mechanism" },
+      { title: "Structural frame" },
+      { title: "Exploded view" },
+      { title: "Dimensioned technical drawings" },
+      { title: "Engineering calculations" },
+      { title: "Design presentation" },
     ],
   },
   {
-    slug: "cylinder-head-assembly",
-    title: "Cylinder Head & Valvetrain",
-    category: "Powertrain",
-    year: "2024",
-    role: "Design & analysis",
-    duration: "8 weeks",
+    slug: "selected-mechanical-cad-designs",
+    title: "Selected Mechanical CAD Designs",
+    category: "CAD",
+    categories: ["Mechanical Design", "CAD", "3D Modeling"],
+    type: "Design exercises & learning projects",
+    role: "Designer",
+    contributionsLabel: "Design categories",
     summary:
-      "Fully documented engine top end, with exploded views, torque data and GD&T drawings for service.",
-    challenge:
-      "Document a complete top-end rebuild so it could be serviced by technicians with no access to the original CAD.",
-    approach: [
-      "Created a fully constrained assembly with correct fastener stacks and torque data.",
-      "Checked valve-to-piston clearance through the full cam cycle with motion analysis.",
-      "Built exploded views and step-by-step assembly sequences.",
-      "Released drawings with GD&T on all critical sealing faces.",
+      "A collection of mechanical models and design exercises showing my CAD workflow, from components to full assemblies.",
+    overview: [
+      "A collection of mechanical models and engineering design exercises demonstrating my interest in mechanical components, 3D modeling, assemblies, and product development.",
+      "The collection showcases my CAD workflow and ability to develop mechanical concepts using professional design software.",
     ],
-    results: [
-      { value: "38", label: "Drawing sheets" },
-      { value: "1.2 mm", label: "Min. valve clearance" },
-      { value: "100%", label: "Parts with drawings" },
+    objective:
+      "Build and demonstrate CAD skill across a range of mechanical components, assemblies and drawings.",
+    contributions: [
+      "Mechanical Components",
+      "Gear Systems",
+      "Shafts and Couplings",
+      "Bearings and Housings",
+      "Mechanical Assemblies",
+      "Brackets and Supports",
+      "Product Concepts",
+      "Technical Drawings",
     ],
-    tools: ["SolidWorks", "SolidWorks Motion", "AutoCAD"],
-    cover: {
-      src: engineExploded,
-      alt: "Exploded view drawing of an engine top-end assembly",
-      caption: "Exploded view of the top-end assembly.",
-    },
+    methodology: [
+      "Model individual mechanical components as parametric parts.",
+      "Combine parts into mechanical assemblies.",
+      "Produce exploded views and renders to explain each design.",
+      "Document designs with engineering drawings.",
+    ],
+    tools: ["SolidWorks", "CATIA V5", "Autodesk Fusion 360"],
+    details: [
+      {
+        title: "Components",
+        text: "Gears, shafts, couplings, bearings, housings, brackets and supports.",
+      },
+      {
+        title: "Assemblies",
+        text: "Mechanical assemblies that bring components together into working arrangements.",
+      },
+      {
+        title: "Product concepts",
+        text: "Early-stage product ideas developed as 3D models.",
+      },
+      {
+        title: "Drawings",
+        text: "Technical drawings that document individual parts and assemblies.",
+      },
+    ],
+    finalDesign:
+      "An ongoing collection of individual models, assembly renders, exploded views and engineering drawings.",
+    highlight:
+      "A working record of my CAD practice across SolidWorks, CATIA V5 and Fusion 360.",
+    results: [],
+    limitations: [
+      "These are design exercises and learning projects, not commissioned work.",
+    ],
     gallery: [
-      {
-        src: engineSingle,
-        alt: "Side view line drawing of a single-cylinder engine and gearbox",
-        caption: "Side view of the assembled engine and gearbox.",
-      },
+      { title: "Individual models" },
+      { title: "Assembly renders" },
+      { title: "Exploded views" },
+      { title: "Engineering drawings" },
     ],
-  },
-  {
-    slug: "main-landing-gear",
-    title: "Main Landing Gear Study",
-    category: "Aerospace",
-    year: "2024",
-    role: "Structural analyst",
-    duration: "12 weeks",
-    summary:
-      "Oleo strut and retraction linkage sized for landing loads and a compact stowed position.",
-    challenge:
-      "Size a cantilever main gear to absorb landing energy within the stroke limit, then retract it into a wing bay with tight clearances.",
-    approach: [
-      "Derived landing load cases from certification-style sink rates.",
-      "Sized the oleo-pneumatic strut and checked stroke, efficiency and rebound.",
-      "Ran nonlinear FEA on the trunnion and side-brace fittings.",
-      "Simulated the retraction linkage to verify clearances through the full swing.",
-    ],
-    results: [
-      { value: "1.5", label: "Min. safety factor" },
-      { value: "82%", label: "Shock absorber efficiency" },
-      { value: "4", label: "Load cases analyzed" },
-    ],
-    tools: ["CATIA V5", "ANSYS Mechanical", "MATLAB"],
-    cover: {
-      src: landingGear,
-      alt: "Technical drawing of an aircraft main landing gear with strut and wheel",
-      caption: "Main gear leg with oleo strut and side brace.",
-    },
-    gallery: [
-      {
-        src: landingGear2,
-        alt: "Technical drawing of a landing gear retracting into a wing bay",
-        caption: "Alternative trailing-link arrangement studied early on.",
-      },
-      {
-        src: landingGear3,
-        alt: "Technical drawing of a faired landing gear with a wheel spat",
-        caption: "Faired fixed-gear option used as a baseline.",
-      },
-    ],
-  },
-  {
-    slug: "compound-helicopter",
-    title: "Compound Helicopter Airframe",
-    category: "Aerospace",
-    year: "2023",
-    role: "Concept designer",
-    duration: "16 weeks",
-    summary:
-      "Coaxial-rotor compound helicopter concept with a pusher propeller and streamlined fuselage.",
-    challenge:
-      "Explore a high-speed rotorcraft layout that keeps the rotor unloaded in cruise while fitting a six-seat cabin.",
-    approach: [
-      "Sized the rotor and pusher propeller from mission requirements in MATLAB.",
-      "Built the fuselage outer mold line around the cabin and drive-shaft routing.",
-      "Estimated drag build-up and trimmed the concept for level cruise.",
-      "Presented the concept with layout drawings and a weight breakdown.",
-    ],
-    results: [
-      { value: "250 kt", label: "Target cruise speed" },
-      { value: "6", label: "Seats" },
-      { value: "3", label: "Configurations compared" },
-    ],
-    tools: ["Fusion 360", "MATLAB", "Excel"],
-    cover: {
-      src: helicopter,
-      alt: "Perspective line drawing of a compound coaxial-rotor helicopter",
-      caption: "Three-quarter view of the concept airframe.",
-    },
-    gallery: [],
-  },
-  {
-    slug: "cruiser-motorcycle",
-    title: "Cruiser Motorcycle Chassis",
-    category: "Vehicle Design",
-    year: "2023",
-    role: "Chassis designer",
-    duration: "10 weeks",
-    summary:
-      "Low-slung cruiser chassis with a stressed engine mount, long wheelbase and relaxed steering geometry.",
-    challenge:
-      "Design a frame that keeps the seat low and the steering stable at highway speed, while carrying the engine as a stressed member.",
-    approach: [
-      "Defined rake, trail and wheelbase from benchmark bikes and rider ergonomics.",
-      "Modeled the tubular frame with weldment profiles and gusseted joints.",
-      "Ran torsional and bending stiffness studies on the frame.",
-      "Detailed brackets and mounts for laser cutting and bending.",
-    ],
-    results: [
-      { value: "34°", label: "Rake angle" },
-      { value: "+22%", label: "Torsional stiffness" },
-      { value: "680 mm", label: "Seat height" },
-    ],
-    tools: ["SolidWorks", "SolidWorks Simulation"],
-    cover: {
-      src: motorcycle,
-      alt: "Side view line drawing of a cruiser motorcycle",
-      caption: "Left-side elevation of the complete motorcycle.",
-    },
-    gallery: [
-      {
-        src: motorcycle2,
-        alt: "Right side line drawing of a cruiser motorcycle",
-        caption: "Right-side elevation showing the exhaust and drive side.",
-      },
-    ],
-  },
-  {
-    slug: "front-suspension",
-    title: "Front Suspension Assembly",
-    category: "Chassis",
-    year: "2022",
-    role: "Suspension designer",
-    duration: "9 weeks",
-    summary:
-      "Double-wishbone front suspension with coil-over damper, tuned kinematics and serviceable mounts.",
-    challenge:
-      "Improve camber control and ride comfort on an existing subframe without changing its mounting points.",
-    approach: [
-      "Mapped the existing hard points and built a kinematic model of the corner.",
-      "Iterated wishbone lengths and pivot positions for camber and bump-steer targets.",
-      "Selected spring and damper rates from the target ride frequency.",
-      "Detailed the wishbones and knuckle, then checked them against braking and cornering loads.",
-    ],
-    results: [
-      { value: "−1.1°", label: "Camber gain at bump" },
-      { value: "1.4 Hz", label: "Ride frequency" },
-      { value: "<0.1°", label: "Bump steer" },
-    ],
-    tools: ["SolidWorks", "MATLAB", "ANSYS Mechanical"],
-    cover: {
-      src: suspension,
-      alt: "Exploded view drawing of a front suspension with coil spring and wishbones",
-      caption: "Exploded view of the front corner assembly.",
-    },
-    gallery: [],
   },
 ];
 

@@ -12,19 +12,32 @@ export function Logo({
     <Link
       href="/"
       onClick={onClick}
-      className={`flex min-w-0 items-center gap-2 text-[17px] font-bold tracking-tight ${className}`}
+      aria-label={`${site.brand} home`}
+      className={`flex min-w-0 items-center gap-2.5 text-[16px] font-extrabold tracking-[0.06em] ${className}`}
     >
+      {/* Gear-like mark in brand yellow. */}
       <svg
-        viewBox="0 0 20 20"
-        className="size-5 shrink-0"
-        fill="currentColor"
+        viewBox="0 0 24 24"
+        className="size-6 shrink-0"
         aria-hidden="true"
       >
-        <rect x="2" y="3" width="16" height="3" rx="0.5" />
-        <rect x="2" y="8.5" width="16" height="3" rx="0.5" />
-        <rect x="2" y="14" width="10" height="3" rx="0.5" />
+        <rect width="24" height="24" rx="5" className="fill-accent" />
+        <circle
+          cx="12"
+          cy="12"
+          r="4.6"
+          fill="none"
+          strokeWidth="2.2"
+          className="stroke-accent-ink"
+        />
+        <path
+          d="M12 3.8v3M12 17.2v3M3.8 12h3M17.2 12h3"
+          strokeWidth="2.2"
+          strokeLinecap="round"
+          className="stroke-accent-ink"
+        />
       </svg>
-      <span className="truncate">{site.name}</span>
+      <span className="truncate">{site.brand}</span>
     </Link>
   );
 }

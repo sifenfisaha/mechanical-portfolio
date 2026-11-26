@@ -11,6 +11,9 @@
   --color-soft: var(--soft);
   --color-nav: var(--nav);
   --color-nav-line: var(--nav-line);
+  --color-accent: var(--accent);
+  --color-accent-ink: var(--accent-ink);
+  --color-accent-text: var(--accent-text);
   --font-sans: var(--font-manrope);
 }
 
@@ -31,14 +34,19 @@
   --nav-shadow: 0 12px 40px -12px rgb(0 0 0 / 0.7);
   --glow: rgb(255 255 255 / 0.045);
   --grid: rgb(255 255 255 / 0.035);
-  --progress: rgb(244 244 244 / 0.7);
+  --progress: rgb(255 194 26 / 0.8);
+  /* SUNEX LAB yellow. accent-text is the shade that stays readable as text
+     on the page background; accent-ink is text placed on a yellow fill. */
+  --accent: #ffc21a;
+  --accent-ink: #111111;
+  --accent-text: #ffc21a;
   color-scheme: dark;
 }
 
 [data-theme="light"] {
-  --page: #f3f2ee;
-  --panel: #fbfaf7;
-  --panel-2: #efede7;
+  --page: #f6f6f4;
+  --panel: #ffffff;
+  --panel-2: #efefec;
   --line: rgb(20 20 20 / 0.09);
   --ink: #141414;
   --ink-hover: #3a3a3a;
@@ -50,6 +58,9 @@
   --glow: rgb(255 255 255 / 0.75);
   --grid: rgb(20 20 20 / 0.05);
   --progress: rgb(20 20 20 / 0.55);
+  --accent: #ffc21a;
+  --accent-ink: #111111;
+  --accent-text: #8a6300;
   color-scheme: light;
 }
 
@@ -65,8 +76,8 @@ body {
 }
 
 ::selection {
-  background: var(--ink);
-  color: var(--page);
+  background: var(--accent);
+  color: var(--accent-ink);
 }
 
 /* The line drawings are white on transparent; flip them to dark ink on paper. */

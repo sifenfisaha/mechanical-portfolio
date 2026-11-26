@@ -22,7 +22,7 @@ export default function NotFound() {
       </p>
       <Link
         href="/"
-        className="mt-8 rounded-[5px] bg-ink px-5 py-2.5 text-[13px] font-semibold text-page transition-colors hover:bg-ink-hover"
+        className="mt-8 rounded-[6px] bg-accent px-5 py-2.5 text-[13px] font-semibold text-accent-ink transition-[filter] hover:brightness-110"
       >
         Go to Homepage
       </Link>

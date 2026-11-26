@@ -1,4 +1,4 @@
-import { tools } from "../_data/site";
+import { toolStrip } from "../_data/site";
 
 // Simple geometric marks so each tool reads like a logo in the strip.
 const marks = [
@@ -10,24 +10,26 @@ const marks = [
   </g>,
   <path key="d" d="M3 12a9 9 0 0 1 18 0h-5a4 4 0 0 0-8 0z" />,
   <path key="e" d="M4 20V4l8 8 8-8v16h-4v-7l-4 4-4-4v7z" />,
+  <rect key="f" x="4" y="4" width="16" height="16" rx="3" />,
 ];
 
 export function Tools() {
   return (
     <section
-      id="tools"
       aria-label="Tools I work with"
       className="mx-auto max-w-[1200px] px-5 md:px-10"
     >
       <ul className="grid grid-cols-2 items-center gap-x-6 gap-y-8 border-y border-line py-9 sm:grid-cols-3 md:flex md:justify-between">
-        {tools.map((tool, i) => (
+        {toolStrip.map((tool, i) => (
           <li
             key={tool}
-            className="flex items-center justify-center gap-2 text-ink/75 transition-colors hover:text-ink"
+            className={`flex items-center justify-center gap-2 transition-colors hover:text-ink ${
+              i < 2 ? "text-ink" : "text-ink/65"
+            }`}
           >
             <svg
               viewBox="0 0 24 24"
-              className="size-6"
+              className={`size-6 ${i < 2 ? "text-accent-text" : ""}`}
               fill="currentColor"
               aria-hidden="true"
             >
